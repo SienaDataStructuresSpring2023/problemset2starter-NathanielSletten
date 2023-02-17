@@ -36,6 +36,14 @@ public class StockHolding
         this.numShares = numShares;
         this.price = price;
     }
+    public double sellShares(int numSell){
+        double amount = 0;
+        if (numShares - numSell >= 0){
+            numShares = numShares - numSell;
+            amount = numSell * price;
+        }
+        return amount;
+    }
     
     @Override
     public String toString(){
