@@ -1,11 +1,17 @@
 /**
  * Write a description of class Asset here.
  *
- * @author (your name)
+ * @author (Matthew Laframboise, Nate Sletten)
  * @version (a version number or a date)
  */
 public class StockHolding
 {
+    // INSTANCE VARIABLES
+    private String symbol;
+    private String name;
+    private int numShares;
+    private double price;
+    
     // @Override
     // public String toString()
     // {
