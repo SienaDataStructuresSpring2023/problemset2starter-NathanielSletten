@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 /**
  * This program creates a portfolio by reading the transactions in
- * the file transactions.txt and buying and selling stock shares
+ * the file transactions.txt. Then it buys and sells stock shares
  * accordingly. Then, this program prints the portfolio report
  * as described in the problem set 2 instructions.
  *
