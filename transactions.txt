@@ -4,3 +4,4 @@ S, SQ, 45
 B, AMZN, Amazon, 30, 112.27
 B, SQ, Block, 25, 79.12
 S, DIS, 15
+B, TSLA, Tesla, 20, 201.65
