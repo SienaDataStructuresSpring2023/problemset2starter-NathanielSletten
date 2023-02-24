@@ -15,7 +15,7 @@ public class Portfolio{
     //constructor
     /**
      * Constructs the ArrayList of StockHolding objects to represent a portfolio that contains the number of stocks bought or sold
-     * and initializes lifetimeInvestment, sum of all the stock purchases made, and lifetimePayout,sum of all the stock purchases 
+     * and initializes lifetimeInvestment, sum of all the stock purchases made, lifetimePayout, and sum of all the stock purchases 
      * sold,to 0. 
      * 
      */
@@ -67,7 +67,13 @@ public class Portfolio{
 
     /**
      * This method takes as input the stock symbol, name of stock, number of shares to
-     * buy and the current price per share. If index of input symbol is in stocks, input numShares 
+     * buy and the current price per share to return the cost of the purchase.
+     * 
+     * @param symbol A string type for the stock symbol
+     * @param stockName A string type for the name of the stock
+     * @param numShares An int type for the number of shares to purchase
+     * @param price A double type for the price of the shares being purchased 
+     * @return Returnd the cost of the purchase
      */
     public double buyStock( String symbol, String stockName, int numShares, double price )
     {
