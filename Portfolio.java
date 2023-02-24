@@ -12,7 +12,7 @@ public class Portfolio{
     private double lifetimeInvestment;
     private double lifetimePayout;
 
-    //constructor
+    // default constructor
     /**
      * Constructs the ArrayList of StockHolding objects to represent a portfolio that contains the number of stocks bought or sold
      * and initializes lifetimeInvestment, sum of all the stock purchases made, lifetimePayout, and sum of all the stock purchases 
@@ -24,7 +24,8 @@ public class Portfolio{
         lifetimeInvestment = 0.0;
         lifetimePayout = 0.0;
     }
-
+    
+    // accessor method for lifetime investment of the portfolio
     /**
      * Returns the lifetimeInvestment of the portfolio.
      * 
@@ -33,7 +34,8 @@ public class Portfolio{
     public double getLifetimeInvestment(){
         return lifetimeInvestment;
     }
-
+    
+    // accessor method for the lifetime payout of the portfolio
     /**
      * Returns the lifetimePayout of the portfolio 
      * 
@@ -43,6 +45,7 @@ public class Portfolio{
         return lifetimePayout;
     }
 
+    // accessor method to return the index of the stock that has the same stock symbol as the input parameter
     /**
      * This method takes as input the stock symbol and returns the index of the stock in stocks that has the same stock symbol as
      * the input. Returns -1, if no stock was found in stocks .
@@ -65,6 +68,7 @@ public class Portfolio{
         return var; 
     }
 
+    // method to buy stock based on the symbol, name, number of shares, and price
     /**
      * This method takes as input the stock symbol, name of stock, number of shares to
      * buy and the current price per share to return the cost of the purchase.
@@ -75,7 +79,7 @@ public class Portfolio{
      * @param price A double type for the price of the shares being purchased 
      * @return Returnd the cost of the purchase
      */
-    public double buyStock( String symbol, String stockName, int numShares, double price )
+    public double buyStock(String symbol, String stockName, int numShares, double price )
     {
         int found = getIndex(symbol);
         StockHolding sh = new StockHolding (symbol,stockName, numShares, price);
@@ -95,6 +99,7 @@ public class Portfolio{
         return cost;
     }
 
+    // method to sell stock based of the symbol and number of shares
     /**
      * This method takes the symbol of the stock you want to sell and the number of shares you want to sell and returns the profit of the sale
      * 
@@ -102,7 +107,7 @@ public class Portfolio{
      * @param numShares An int type for the number shares to be purchased
      * @return Returns the profit from the sale
      */
-    public double sellStock (String symbol, int numShares)
+    public double sellStock(String symbol, int numShares)
     {
         int index = getIndex(symbol);
         double profit = 0.0;
@@ -120,6 +125,7 @@ public class Portfolio{
         return profit;
     }
 
+    // accessor method to return the value of the portfolio
     /** 
      * This method returns the value of the portfolio
      * 
@@ -140,6 +146,7 @@ public class Portfolio{
 
     }
 
+    // toString method to print out a string of the stock symbol, name, number of shares, and the price. Also prints out the total value.
     /**
      * This method returns a string of the symbol, names, shares, price and total
      * @return returns a string of the symbol, names, shares, price and total
