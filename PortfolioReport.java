@@ -7,16 +7,21 @@ import java.io.FileNotFoundException;
  * accordingly. Then, this program prints the portfolio report
  * as described in the problem set 2 instructions.
  *
- * @(Nathaniel Sletten, Matthew Laframboise)
- * @(2/23/2023)
+ * @ (Nathaniel Sletten, Matthew Laframboise)
+ * @ (2/23/2023)
  */
 public class PortfolioReport
 {
     public static void main(String[] args) throws FileNotFoundException
     {
-        Scanner file = new Scanner(new File("transactions.txt"));        
+        // create a new scanner object
+        Scanner file = new Scanner(new File("transactions.txt"));
+        
+        // construct a new Portfolio object
         Portfolio p = new Portfolio();
-
+        
+        // create a while loop that checks if the file has data, and assign the instance variables the correct values 
+        //according to their position in the array "data"
         while(file.hasNext()){
             String line = file.nextLine();
             String[] data = line.split(",");
