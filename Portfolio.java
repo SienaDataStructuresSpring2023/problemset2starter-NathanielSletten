@@ -120,6 +120,11 @@ public class Portfolio{
         return profit;
     }
 
+    /** 
+     * This method returns the value of the portfolio
+     * 
+     * @returns Returns value of portfolio
+     */
     public double getCurrentValue()
     {
 
@@ -136,7 +141,8 @@ public class Portfolio{
     }
 
     /**
-     * 
+     * This method returns a string of the symbol, names, shares, price and total
+     * @return returns a string of the symbol, names, shares, price and total
      */
     @Override
 
