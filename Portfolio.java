@@ -94,6 +94,8 @@ public class Portfolio{
         else
         {
             stocks.add(sh);
+            cost = numShares * price;
+            lifetimeInvestment += cost;
         }
 
         return cost;
