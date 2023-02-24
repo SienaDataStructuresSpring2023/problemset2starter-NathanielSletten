@@ -95,6 +95,13 @@ public class Portfolio{
         return cost;
     }
 
+    /**
+     * This method takes the symbol of the stock you want to sell and the number of shares you want to sell and returns the profit of the sale
+     * 
+     * @param symbol A string type for the symbol of the stock to be purchased
+     * @param numShares An int type for the number shares to be purchased
+     * @return Returns the profit from the sale
+     */
     public double sellStock (String symbol, int numShares)
     {
         int index = getIndex(symbol);
