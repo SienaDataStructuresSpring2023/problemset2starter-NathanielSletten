@@ -46,8 +46,9 @@ public class StockHolding
      * @param price This is a double value for the price per share bought.
      */
     public void buyShares(int numShares, double price){
-        this.numShares = numShares;
-        this.price = price;
+        // This gives you the average cost per share 
+        this.price = ((this.numShares * this.price) + (numShares * price))/(this.numShares + numShares);
+        this.numShares = this.numShares + numShares;
     }
     
     // method to sell a number of shares based on the number to sell input
