@@ -11,13 +11,18 @@
  */
 public class StockHolding
 {
-    // declare the instance variables
     private String symbol;
     private String name;
     private int numShares;
     private double price;
     
-    // contructor, intialize the instance variables
+    /**
+     * This constructs the StockHolding object
+     * @param symbol This is a string representation of the stock ticker
+     * @param name This is a string representation of the companies name
+     * @param numShares This is an int representation of the number of shares you own 
+     * @param price This is a double representation of the average price of the 
+     */
     public StockHolding(String symbol, String name, int numShares, double price){
         this.symbol = symbol;
         this.name = name;
@@ -25,33 +30,45 @@ public class StockHolding
         this.price = price;
     }
     
-    // accessor methods to return the symbol, name, number of shares, and price of the specified stock
+    /**
+     * Returns the stock ticker
+     * @return This returns the stocks ticker
+     */
     public String getSymbol(){
         return symbol;
     }
+    /**
+     * Returns the stock name
+     * @return This returns the stocks name
+     */
     public String getName(){
         return name;
     }
+    /**
+     * Returns the number of shares you own 
+     * @return This returns the number of shares you own
+     */
     public int getNumShares(){
         return numShares;
     }
+    /**
+     * Returns the stocks price
+     * @return This returns the stocks price
+     */
     public double getPrice(){
         return price;
     }
-    
-    // method to buy a number of shares based on the number and price input
+
     /**
      * This method updates the instance variables for the number of shares to buy and the price per share. 
      * @param numShares This is and int value for the number of shares bought.
      * @param price This is a double value for the price per share bought.
      */
     public void buyShares(int numShares, double price){
-        // This gives you the average cost per share 
         this.price = ((this.numShares * this.price) + (numShares * price))/(this.numShares + numShares);
         this.numShares = this.numShares + numShares;
     }
     
-    // method to sell a number of shares based on the number to sell input
     /**
      * This method is used to sell shares. It will first check to make sure the number of shares you want to sell is less the the amount of shares purchased.
      * If the number of shares you want to sell is less then the total amount of shares owned then it updates the instance variables and returns the dollar
@@ -68,7 +85,6 @@ public class StockHolding
         return amount;
     }
     
-    // toString method to print out in a well organized format
     @Override
     public String toString(){
         //DO NOT EDIT THIS METHOD.
